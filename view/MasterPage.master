@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Site_viajanet</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #Text1 {
+            width: 117px;
+        }
+        #Password1 {
+            width: 151px;
+        }
+    </style>
+</head>
+<body style="height: 734px">
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <asp:Label ID="lbnome" runat="server" Text="Nome:"></asp:Label>
+        
+        </asp:ContentPlaceHolder>
+        <asp:TextBox ID="campo_nome" runat="server"></asp:TextBox>
+        </div>
+        <asp:Label ID="lbsenha" runat="server" Text="Senha:"></asp:Label>
+        <asp:TextBox ID="campo_senha" runat="server"></asp:TextBox>
+        <p>
+            <asp:Label ID="lb_email" runat="server" Text="Emai:"></asp:Label>
+            <asp:TextBox ID="campo_email" runat="server"></asp:TextBox>
+        </p>
+        <asp:Label ID="lb_tel" runat="server" Text="Telefone"></asp:Label>
+        <asp:TextBox ID="campo_tel" runat="server"></asp:TextBox>
+        <p>
+            <asp:Label ID="Label1" runat="server" Text="Rua"></asp:Label>
+            <asp:TextBox ID="campo_rua" runat="server"></asp:TextBox>
+        </p>
+        <asp:Label ID="Label2" runat="server" Text="CEP"></asp:Label>
+        <asp:TextBox ID="campo_cep" runat="server"></asp:TextBox>
+        <p>
+            <asp:Label ID="Label3" runat="server" Text="Bairro"></asp:Label>
+            <asp:TextBox ID="campo_bairro" runat="server"></asp:TextBox>
+        </p>
+        <p>
+            <asp:Button ID="btn_cadastro" runat="server" OnClick="btn_inserir" Text="cadastrar" Height="26px" />
+            <asp:Button ID="btn_delete" runat="server" OnClick="btn_deleta" Text="deletar" Height="26px" />
+            <asp:Button ID="btn_atualizar" runat="server" OnClick="btn_atualiza" Text="atualizar" Height="26px" />
+            <asp:Button ID="btn_consultar" runat="server" Text="consultar" OnClick="btn_consultar_Click" />
+        </p>
+        <asp:Table ID="Mostar_coisas" runat="server" Height="210px" Width="380px">
+            <asp:TableRow ID ="nova_linha"></asp:TableRow>
+        </asp:Table>
+    </form>
+</body>
+</html>
